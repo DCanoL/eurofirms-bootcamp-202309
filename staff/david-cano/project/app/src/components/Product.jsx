@@ -1,7 +1,7 @@
 import Button from '../library/Button'
 import { useLocation } from 'react-router-dom'
 import logic from '../logic'
-import CartItemQuantity from './CartItemQuantity'
+// import CartItemQuantity from './CartItemQuantity'
 import React, { useState, useEffect } from 'react'
 
 export default function Product(props) {
