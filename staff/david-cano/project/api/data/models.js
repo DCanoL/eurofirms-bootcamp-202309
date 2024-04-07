@@ -60,13 +60,43 @@ const product = new Schema({
     quantity: {
         type: Number,
         required: true,
-        default: 1 // todo remove this props
+        default: 1 
+    },
+})
+
+const order = new Schema({
+    user: {
+        type: ObjectId,
+        ref: 'User',
+        required: true
+    },
+
+    products: [
+        {
+            type: ObjectId,
+            ref: "Product",
+        }
+    ],
+
+    payment: {},
+
+    buyer: {
+        type: String,
+        ref: "User",
+    },
+
+    status: {
+        type: String,
+        default: "Processing",
+        enum: ["Processing", "Sent", "Delivered", "Cancel"],
     },
 })
 
 const User = model("User", user)
 const Product = model("Product", product)
+const Order = model("Order", order)
 module.exports = {
     User,
-    Product
+    Product,
+    Order
 }

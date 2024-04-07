@@ -1,0 +1,1 @@
+curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWZiMzA4NTYxNDU0NzZiODRiYmQ3NTciLCJpYXQiOjE3MTI0NjEzNDYsImV4cCI6MTcxNTA1MzM0Nn0.m-1_jDecd6sflN966N9ZlEAV0yr60MOe8J13QuCs52k' -H 'Content-Type: application/json' -d '{"products": [ "65fcfe8297ce09101bbd89d2", "payment": "Success", "buyer": "El Mismo", "status": "Processing" }' localhost:8080/orders -v
