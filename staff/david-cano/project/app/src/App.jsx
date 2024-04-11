@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import Home from './pages/Home'
 import Cart from './pages/Cart'
 import Dashboard from './pages/Dashboard'
+import UserOrders from './pages/UserOrders'
 
 import { CreateNewProduct } from './components'
 import CartContext from './components/CartContext'
@@ -101,6 +102,10 @@ function App() {
     navigate("/dashboard")
   }
 
+  function handleUserOrders() {
+    navigate("/userOrders")
+  }
+
   function handleCartItemAdd() {
     retrieveUserCart()
   }
@@ -128,13 +133,15 @@ function App() {
       <CartContext.Provider value={cartProducts}>
         <Routes>
           <Route path='/' element={<Home onError={handleError} />} />
-          <Route path='/cart/*' element={<Cart onLogout={handleHomeShow} onCartItemAdd={handleCartItemAdd} onError={handleError} />} />
+          <Route path='/cart/*' element={<Cart onLogout={handleHomeShow} onCartItemAdd={handleCartItemAdd} onCheckOut={handleUserOrders} onError={handleError} />} />
 
           <Route path="/register" element={<Register onSuccess={handleLoginShow} onLoginClick={handleLoginShow} onError={handleError} />} />
 
           <Route path="/login" element={<Login onSuccess={handleLoginSuccess} onRegisterClick={handleRegisterShow} onError={handleError} />} />
 
           <Route path='/dashboard/*' element={<Dashboard onLogout={handleHomeShow} onError={handleError} />} />
+
+          <Route path='/userOrders/*' element={<UserOrders  onError={handleError} />} />
 
           <Route path='/new-product' element={<CreateNewProduct onNewProductCancelClick={handleNewProductCancelClick} onNewProductSubmit={handleNewProductSubmit} onError={handleError} />} />
         </Routes>

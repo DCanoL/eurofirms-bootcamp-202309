@@ -41,7 +41,7 @@ const validate = {
     array(array, explain) {
         if (!Array.isArray(array)) throw new TypeError(explain + ' is not an array');
         if (array.length === 0) throw new ContentError(explain + ' is an empty array');
-    },
+    }
 }
 
 

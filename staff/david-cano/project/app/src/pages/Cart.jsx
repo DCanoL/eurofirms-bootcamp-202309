@@ -1,11 +1,15 @@
 import React from 'react'
 import { CartItems, UserHeader, Footer, CartTotal } from '../components'
-import { Container } from '../library'
+import { Container, Button } from '../library'
 import { useCartContext } from '../components/CartContext'
 
 const Cart = (props) => {
 
     const products = useCartContext()
+
+    function handleCheckOutClick() {
+        props.onCheckOut()
+    }
 
     return (
         <Container align="center">
@@ -14,7 +18,12 @@ const Cart = (props) => {
             {products.length > 0 ? (
                 <>
                     <CartItems onCartItemAdd={props.onCartItemAdd} onError={props.onError} />
+
                     <CartTotal onError={props.onError} />
+
+                    <Button onClick={handleCheckOutClick}>
+                        Check Out
+                    </Button>
                 </>
             ) : (
                 <>

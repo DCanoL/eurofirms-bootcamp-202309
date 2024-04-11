@@ -83,13 +83,19 @@ const order = new Schema({
     buyer: {
         type: String,
         ref: "User",
+        required : true
     },
 
-    status: {
+    statusOrder: {
         type: String,
         default: "Processing",
         enum: ["Processing", "Sent", "Delivered", "Cancel"],
     },
+
+    date: {
+        type: Date,
+        default: Date.now
+    }
 })
 
 const User = model("User", user)

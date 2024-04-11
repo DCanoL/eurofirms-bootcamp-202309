@@ -36,7 +36,7 @@ function UserHeader(props) {
 
     return (
         <Container align="center">
-        <div className="flex justify-between items-center md:min-w-[500px] lg:min-w-[768px] bg-[#ededaa] rounded-3xl" aria-label="Header">
+        <div className="fixed top-0 w-full flex justify-between items-center md:min-w-[500px] lg:min-w-[768px] bg-[#ededaa] rounded-3xl" aria-label="Header">
 
             <Link onClick={handleHomeClick}>
                 <Logo />

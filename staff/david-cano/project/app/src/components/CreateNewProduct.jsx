@@ -2,7 +2,8 @@ import Container from "../library/Container"
 import Field from "../library/Field"
 import Form from "../library/Form"
 import Button from "../library/Button"
-
+import Footer from './Footer'
+import AdminHeader from './AdminHeader'
 import logic from '../logic'
 
 function CreateNewProduct(props) {
@@ -44,7 +45,7 @@ function CreateNewProduct(props) {
     return (
         <Container align="center">
             <h2>Create New Product</h2>
-
+<AdminHeader/>
             <Form onSubmit={handleNewProductSubmit}>
                 <Field type="text" id="name-field" required>
                     Product Name
@@ -65,6 +66,7 @@ function CreateNewProduct(props) {
                 <Button>Create New Product</Button>
                 <Button onClick={handleCancelClick}>Cancel</Button>
             </Form>
+<Footer/>
         </Container>
     )
 }
