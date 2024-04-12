@@ -11,6 +11,7 @@ import createNewProduct from './createNewProduct'
 import deleteProduct from './deleteProduct'
 import retrieveProductsForUser from './retrieveProductsForUser'
 import retrieveMyOrders from './retrieveMyOrders'
+import createOrder from './createOrder'
 
 const logic = {
     getLoggedInUserId,
@@ -25,7 +26,8 @@ const logic = {
     createNewProduct,
     deleteProduct,
     retrieveProductsForUser,
-    retrieveMyOrders
+    retrieveMyOrders,
+    createOrder
 }
 
 export default logic

@@ -29,7 +29,7 @@ function retrieveProductsForUser(userId, callback) {
                         product.cartItem = user.cartItems.some(productObjectId => productObjectId.toString() === product.id)
                     })
 
-                    callback(null, products)
+                    callback(null, products.reverse())
                 })
                 .catch(error => callback(new SystemError(error.message)))
         })

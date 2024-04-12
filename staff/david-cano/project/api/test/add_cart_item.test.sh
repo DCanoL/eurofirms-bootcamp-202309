@@ -1,1 +1,1 @@
-curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTZkYjlmYThmZDZkNjU4MTkzZGMxNzYiLCJpYXQiOjE3MDI0NjU4MjN9.TybzUcO2lvt1Tsr2f30jS_ANzkCCAGvpcF_d-Bbb85M' -X PATCH localhost:8080/products/65686c275ef8e443ccc48336/cartItems -v
+curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjE5NGQ1YTkxMTI2NDcyNjNmZGI0ODIiLCJpYXQiOjE3MTI5NDEwNjQsImV4cCI6MTcxNTUzMzA2NH0.gesc5MkAcQx1ubuvl23xWp_oCA0B4OP2TPzmlAciOyQ' -X PATCH localhost:8080/products/661962d7d7de3e49e452da6d/cartItems -v

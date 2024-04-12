@@ -1,14 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CartItems, UserHeader, Footer, CartTotal } from '../components'
 import { Container, Button } from '../library'
 import { useCartContext } from '../components/CartContext'
+import logic from '../logic'
 
 const Cart = (props) => {
 
-    const products = useCartContext()
+    // const products = useCartContext()
+    const [products, setProducts] = useState([useCartContext()])
 
     function handleCheckOutClick() {
+        //TODO manage payment
+        try {
+            logic.createOrder((error) => {
+                if (error) {
+                    props.onError(error)
+
+                    return
+                }
+                setProducts([])
+            })
+        } catch (error) {
+            props.onError(error)
+        }
+
         props.onCheckOut()
+
     }
 
     return (

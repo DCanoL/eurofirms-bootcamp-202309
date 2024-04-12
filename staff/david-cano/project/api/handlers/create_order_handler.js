@@ -9,9 +9,7 @@ module.exports = (req, res) => {
 
         const { sub: userId } = jwt.verify(token, process.env.JWT_SECRET)
 
-        const { products, payment, statusOrder } = req.body
-
-        logic.createOrder(userId, products, payment, statusOrder, error => {
+        logic.createOrder(userId, error => {
             if (error) {
                 let status = 500
 

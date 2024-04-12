@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import Orders from '../components/Orders'
 import { Container } from '../library'
-import { UserHeader, Footer } from '../components'
+import { UserHeader, Footer, CartTotal } from '../components'
 
 import logic from '../logic'
 
@@ -17,7 +17,7 @@ export default function MyOrders(props) {
 
     function refreshOrders() {
         try {
-            logic.retrieveMyOrders( (error, orders) => {
+            logic.retrieveMyOrders((error, orders) => {
                 if (error) {
                     props.onError(error)
 
@@ -32,14 +32,17 @@ export default function MyOrders(props) {
     }
 
     return (
-    <>
-    <Container align="center">
-    <UserHeader/>
-    <h2 className='flex p-3 justify-center bg-[skyblue] m-3 rounded-3xl'>YOUR ORDERS</h2>
+        <>
+            <Container align="center">
+                <UserHeader />
+                <h2 className='flex p-3 justify-center bg-[skyblue] m-3 rounded-3xl'>YOUR ORDERS</h2>
 
-    <Orders orders={orders} onError={props.onError} />
-    <Footer/>
-    </Container>
-    </>
+                <div className=''>
+                    <Orders orders={orders} onError={props.onError} />
+                </div>
+                <CartTotal />
+                <Footer />
+            </Container>
+        </>
     )
 }

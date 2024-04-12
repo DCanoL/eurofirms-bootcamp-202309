@@ -48,7 +48,7 @@ mongoose.connect(process.env.MONGODB_URL)
 
         api.patch('/products/forUser/:productId/quantity', jsonBodyParser, updateCartItemQuantityHandler)
 
-        api.post('/orders', jsonBodyParser, createOrderHandler)
+        api.post('/orders', createOrderHandler)
 
         api.get('/orders/mine', retrieveMyOrdersHandler)
 

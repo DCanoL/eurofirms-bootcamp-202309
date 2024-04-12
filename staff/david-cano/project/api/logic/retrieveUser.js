@@ -16,7 +16,7 @@ function retrieveUser(userId, callback) {
                 return
             }
 
-            callback(null, user)
+            callback(null)
         })
         .catch(error => callback(new SystemError(error.message)))
 }
