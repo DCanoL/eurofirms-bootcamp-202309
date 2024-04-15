@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from '../library';
+import CartTotal from './CartTotal';
 
 function Order(props) {
     console.log('Order');
@@ -18,6 +19,7 @@ function Order(props) {
                                 <th className="p-2">Buyer</th>
                                 <th className="p-2">Products</th>
                                 <th className="p-2">Date</th>
+                                <th className="p-2">Total</th>
                             </tr>
                         </thead>
 
@@ -27,6 +29,7 @@ function Order(props) {
                                 <td className="p-2">{order.buyer}</td>
                                 <td className="p-2">{order.products}</td>
                                 <td className="p-2">{order.date}</td>
+                                <td className="p-2"><CartTotal /></td>
                             </tr>
                         </tbody>
                     </table>

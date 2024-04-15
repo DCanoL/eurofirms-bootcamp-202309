@@ -35,25 +35,24 @@ export default function Login(props) {
         props.onRegisterClick()
     }
 
-    return <Container align="center">
-        <Header />
+    return (
+        <Container align="center">
+            <Header />
+                <h1>Login</h1>
 
-        <div className='pt-[50px]'>
-        <h1>Login</h1>
+                <Form onSubmit={handleLoginSubmit}>
+                    <Field type="email" id="email-field" title="E-mail" required>E-mail</Field>
 
-<Form onSubmit={handleLoginSubmit}>
-    <Field type="email" id="email-field" title="E-mail" required>E-mail</Field>
+                    <Field type="password" id="password-field" title="Password" required>Password</Field>
 
-    <Field type="password" id="password-field" title="Password" required>Password</Field>
+                    <Button type="submit">Login</Button>
+                </Form>
 
-    <Button type="submit">Login</Button>
-</Form>
+                <Link onClick={handleRegisterClick}>Register</Link>
+            
 
-<Link onClick={handleRegisterClick}>Register</Link>
-        </div>
-
-        <div className='pt-[50px]'>
-        <Footer />
-        </div>
-    </Container>
+                <Footer />
+            
+        </Container>
+    )
 }

@@ -1,7 +1,9 @@
+const { validate } = require('./helpers')
 const { Product } = require('../data/models')
 const { SystemError } = require('./errors')
 
 function retrieveProducts(callback) {
+    validate.function(callback, 'callback')
 
             Product.find().select('-__v').populate('author', 'role').lean()
                 .then(products => {
@@ -9,12 +11,10 @@ function retrieveProducts(callback) {
                         product.id = product._id.toString()
                         delete product._id
 
-                        if (product.author._id) {
+                        if (product.author && product.author._id) {
                             product.author.id = product.author._id.toString()
                             delete product.author._id
                         }
-
-                        // product.cartItem = user.cartItems.some(productObjectId => productObjectId.toString() === product.id)
 
                     })
 

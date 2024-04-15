@@ -10,12 +10,12 @@ export default function Product(props) {
     const product = props.product
     const location = useLocation()
     const isHomeOrDashboard = location.pathname === '/' || location.pathname === '/dashboard'
-    const [quantity, setQuantity] = useState(product.quantity)
+    // const [quantity, setQuantity] = useState(product.quantity)
     const [price, setPrice] = useState(product.price * product.quantity)
 
     useEffect(() => {
-        setPrice(product.price * quantity);
-    }, [quantity, product.price]);
+        setPrice(product.price);
+    }, [product.price]);
 
     function handleAddCart() {
         console.log('Product Add Cart')

@@ -32,17 +32,24 @@ export default function MyOrders(props) {
     }
 
     return (
-        <>
             <Container align="center">
                 <UserHeader />
                 <h2 className='flex p-3 justify-center bg-[skyblue] m-3 rounded-3xl'>YOUR ORDERS</h2>
 
-                <div className=''>
+                {orders.length > 0 ? (
+                <>
+                    <div>
                     <Orders orders={orders} onError={props.onError} />
-                </div>
-                <CartTotal />
+                {/* <CartTotal /> */}
+                    </div>
+                </>
+            ) : (
+                <>
+                    <h2>¡¡¡ Your ORDERS is EMPTY !!!</h2>
+                    <h2>Please, GO TO THE SHOOPING</h2>
+                </>
+                )}
                 <Footer />
             </Container>
-        </>
     )
 }

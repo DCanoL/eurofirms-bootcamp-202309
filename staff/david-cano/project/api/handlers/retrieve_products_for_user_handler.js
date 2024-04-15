@@ -21,11 +21,6 @@ module.exports = (req, res) => {
                 return
             }
 
-            // const resProducts = products.map(product => ({
-            //     ...product,
-            //     cartItems: user.cartItems.some(productObjectId => productObjectId.toString() === product.id)
-            // }));
-
             res.json(products);
         })
     } catch (error) {

@@ -5,7 +5,7 @@ export default function CartTotal() {
 
     const products = useCartContext()
 
-    const totalProducts = products.reduce((total, product) => total + parseFloat(product.price * product.quantity), 0);
+    const totalProducts = products.reduce((total, product) => total + parseFloat(product.price), 0);
 
     return (
         <div>

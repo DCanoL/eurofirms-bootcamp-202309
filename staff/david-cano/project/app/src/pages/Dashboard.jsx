@@ -11,7 +11,7 @@ export default function Dashboard(props) {
     const navigate = useNavigate()
 
     function handleNewProductClick() {
-
+        setTimestamp(Date.now())
         navigate('/new-product')
 
         //logic.createNewProduct()

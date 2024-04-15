@@ -88,14 +88,8 @@ function App() {
     setFeedback(null)
   }
 
-  //   function handleCreateNewProduct() {
-  //     navigate('/new-product')
-  //     setFeedback(null)
-  //   }
-
   function handleNewProductSubmit() {
     navigate("/dashboard")
-    // setTimestamp(Date.now())
   }
 
   function handleNewProductCancelClick() {

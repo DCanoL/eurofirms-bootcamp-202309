@@ -1,11 +1,11 @@
 const req = {
     method: 'GET',
     headers: {
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1NGNmYmZiYmJlYzAzMDNmYWM3ZGYiLCJpYXQiOjE3MDk3MjE0ODAsImV4cCI6MTcxMjMxMzQ4MH0.3LO85E_UewZP5tOEWOXagGI73b8fZP0CISBfyh2rCao',
-    },
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjE5NGQ1YTkxMTI2NDcyNjNmZGI0ODIiLCJpYXQiOjE3MTMwNjU3NjgsImV4cCI6MTcxNTY1Nzc2OH0.cMmkklUAu3I8zzQTtLssk-7Y_YLzES4-3ydioWIoWRQ',
+    }
 }
 
-fetch('http://localhost:8080/products/user', req)
+fetch('http://localhost:8080/products/forUser', req)
     .then(res => {
         if (!res.ok) {
             res.json()

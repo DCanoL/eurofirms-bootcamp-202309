@@ -41,7 +41,6 @@ export default function Register(props) {
     return <Container align='center'>
         <Header />
 
-        <div className='pt-[50px]'>
         <h1>Register</h1>
 
 <Form onSubmit={handleRegisterSubmit}>
@@ -55,10 +54,7 @@ export default function Register(props) {
 </Form>
 
 <Link onClick={handleLoginClick}>Login</Link>
-        </div>
-
-        <div className='pt-[50px]'>
+        
         <Footer />
-        </div>
     </Container>
 }

@@ -24,10 +24,10 @@ const user = new Schema({
         default: 'regular'
     },
 
-    cartItems: {
-        type: [ObjectId],
+    cartItems: [{
+        type: ObjectId,
         ref: 'Product'
-    }
+    }]
 })
 
 const product = new Schema({
@@ -57,11 +57,6 @@ const product = new Schema({
         required: true
     },
 
-    quantity: {
-        type: Number,
-        required: true,
-        default: 1 
-    },
 })
 
 const order = new Schema({
