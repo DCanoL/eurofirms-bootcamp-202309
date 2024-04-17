@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../library';
+import { Container, Button } from '../library';
 import CartTotal from './CartTotal';
 
 function Order(props) {
@@ -33,6 +33,7 @@ function Order(props) {
                             </tr>
                         </tbody>
                     </table>
+                    <Button>BUY</Button>
                 </div>
             </Container>
         </>
