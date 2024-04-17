@@ -25,13 +25,7 @@ function Order(props) {
 
                         <tbody>
                             <tr className="text-sm text-black-700 text-center bg-gray-200 border">
-                                <td className="p-2">{order.products.map(product => (
-                                        <div key={product._id}>
-                                            <div>{product.name}</div>
-                                            <div><img src={product.img} alt={product.name} /></div>
-                                            <div>{product.price}</div>
-                                        </div>
-                                    ))}</td>
+                                <td className="p-2">{order.products}</td>
                                 <td className="p-2">{order.statusOrder}</td>
                                 <td className="p-2">{order.buyer}</td>
                                 <td className="p-2">{order.date}</td>

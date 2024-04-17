@@ -45,6 +45,12 @@ function header() {
         }
     }
 
+    function handleMyOrdersClick(event) {
+        event.preventDefault()
+
+        navigate('/userOrders')
+    }
+
     function handleCartClick() {
         if (user && user.role === 'regular') {
             navigate('/cart')
@@ -75,6 +81,11 @@ function header() {
                     <span>{user.name}</span>
                 )}</h2>
 
+                {user && (
+                    <Link onClick={handleMyOrdersClick}>
+                        My Orders
+                    </Link>
+                )}
                 <Link onClick={handleCartClick}>
                     <h1>
                         <img className='rounded-full' width='50px' height='50px' src="https://img.freepik.com/vector-premium/icono-cesta-compras-comercio-electronico-vector-color-sencillo_1178600-658.jpg?w=250" alt="https://img.freepik.com/vector-premium/icono-cesta-compras-comercio-electronico-vector-color-sencillo_1178600-658.jpg?w=250" />
