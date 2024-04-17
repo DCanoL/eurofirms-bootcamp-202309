@@ -6,7 +6,7 @@ mongoose.connect('mongodb://127.0.0.1/ecommerce_test')
     .then(() => {
         try {
             addCartItem
-            ('65fa44fb1f95aa973901bc55', '65dd97017331694d723cd0fc', error => {
+            ('661c9af38f266b6e56ea9716', '661f60df6b0303a8478fa90f', error => {
                 if (error) {
                     console.error(error)
 

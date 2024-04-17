@@ -22,7 +22,9 @@ function createOrder(userId, callback) {
                 quantity: 1  // Para ajustar la cantidad según sea necesario
             }))
 
-            Order.create({ user: userId, products, buyer: user.name })
+            const totalPrice = user.cartItems.reduce((total, item) => total + parseFloat(item.price), 0)
+
+            Order.create({ user: userId, products: products, buyer: user.name, totalPrice: totalPrice })
             .then(() => {
                 // Limpiar cartItems del usuario
                 user.cartItems = []

@@ -11,7 +11,7 @@ module.exports = (req, res) => {
 
         const { name, img, description, price } = req.body
 
-        logic.createProduct(userId, name, img, description, price, error => {
+        logic.createProduct(userId, name, img, description, price, (error) => {
             if (error) {
                 let status = 500
 

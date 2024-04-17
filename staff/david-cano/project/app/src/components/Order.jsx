@@ -29,7 +29,7 @@ function Order(props) {
                                 <td className="p-2">{order.statusOrder}</td>
                                 <td className="p-2">{order.buyer}</td>
                                 <td className="p-2">{order.date}</td>
-                                <td className="p-2"><CartTotal /></td>
+                                <td className="p-2">{order.totalPrice} €</td>
                             </tr>
                         </tbody>
                     </table>

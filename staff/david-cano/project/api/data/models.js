@@ -70,10 +70,22 @@ const order = new Schema({
 
     products: [
         {
-            name: String,
-            img: String,
-            price: String,
-            quantity: Number 
+            name: {
+                type: String,
+                required: true
+            },
+            img: {
+                type: String,
+                required: true
+            },
+            price: {
+                type: String,
+                required: true
+            },
+            quantity: {
+                type: Number,
+                required: true
+            }, 
         }
     ],
 
@@ -94,6 +106,11 @@ const order = new Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+
+    totalPrice: {
+        type: Number,
+        required: true
     }
 })
 
