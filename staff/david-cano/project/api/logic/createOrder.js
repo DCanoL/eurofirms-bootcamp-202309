@@ -7,6 +7,7 @@ function createOrder(userId, callback) {
     validate.function(callback, 'callback')
 
     User.findById(userId)
+        .populate('cartItems')
         .then(user => {
             if (!user) {
                 callback(new NotFoundError('user not found'))
@@ -14,9 +15,20 @@ function createOrder(userId, callback) {
                 return
             }
 
-            Order.create({ user: userId, products: user.cartItems, buyer: user.name })
+            const products = user.cartItems.map(item => ({
+                name: item.name,
+                img: item.img,
+                price: item.price,
+                quantity: 1  // Para ajustar la cantidad según sea necesario
+            }))
+
+            Order.create({ user: userId, products, buyer: user.name })
+            .then(() => {
+                // Limpiar cartItems del usuario
+                user.cartItems = []
+                return user.save()
+            })
                 .then(() => {
-                    //TODO clean cartItems from user
                     callback(null)
                 })
                 .catch(error => callback(new SystemError(error.message)))
