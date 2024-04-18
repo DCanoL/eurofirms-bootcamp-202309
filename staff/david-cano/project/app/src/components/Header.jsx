@@ -66,6 +66,7 @@ function header() {
                 <Link onClick={handleHomeClick}>
                     <Logo />
                 </Link>
+                <h1>ECOMMERCE "BBB"</h1>
                 {!user && (
                     <>
                         <Link onClick={handleRegisterClick}>

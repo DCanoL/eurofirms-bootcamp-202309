@@ -47,6 +47,7 @@ function UserHeader(props) {
                 <Link onClick={handleHomeClick}>
                     <Logo />
                 </Link>
+                <h1>ECOMMERCE "BBB"</h1>
 
                 <h2> Wellcome! {user && (
                     <span>{user.name}</span>

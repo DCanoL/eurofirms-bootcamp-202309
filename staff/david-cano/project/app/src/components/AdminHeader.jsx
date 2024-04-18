@@ -31,6 +31,7 @@ function AdminHeader(props) {
         <div className="fixed top-0 w-full flex justify-between items-center md:min-w-[500px] lg:min-w-[768px] bg-[#ededaa] rounded-3xl" aria-label="Header">
 
                 <AdminLogo />
+                <h1>ECOMMERCE "BBB"</h1>
             
                 <h2 className='pr-[5px]'> Wellcome! {user && (
                     <span>{user.name}</span>
