@@ -15,7 +15,7 @@ function retrieveMyOrders(userId, callback) {
                 return
             }
 
-            Order.find({ user: userId }).select('-__v').populate('user', 'name').lean()
+            Order.find({ user: userId }).select('-__v').populate('user', 'name').populate('products', 'name img price').lean()
                 .then(orders => {
                     orders.forEach(order => {
                         order.id = order._id.toString()
@@ -26,7 +26,7 @@ function retrieveMyOrders(userId, callback) {
                             delete order.user._id
                         }
 
-                        order.products = order.products.map(product => product.toString())
+                        // order.products = order.products.map(product => product.toString())
 
                     })
 

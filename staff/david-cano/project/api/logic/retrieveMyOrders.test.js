@@ -12,7 +12,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/ecommerce_test')
 
                     return
                 }
-                console.log(orders)
+                console.log(orders[0].products)
             })
         } catch (error) {
             console.error(error)
