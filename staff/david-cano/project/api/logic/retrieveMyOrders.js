@@ -26,7 +26,12 @@ function retrieveMyOrders(userId, callback) {
                             delete order.user._id
                         }
 
-                        // order.products = order.products.map(product => product.toString())
+                        const products = order.products
+
+                        products.forEach(product => {
+                            product.id = product._id.toString()
+                            delete product._id
+                        })
 
                     })
 

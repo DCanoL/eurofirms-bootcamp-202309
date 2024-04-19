@@ -1,1 +1,1 @@
-curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWZiMzA4NTYxNDU0NzZiODRiYmQ3NTciLCJpYXQiOjE3MTI0NjEzNDYsImV4cCI6MTcxNTA1MzM0Nn0.m-1_jDecd6sflN966N9ZlEAV0yr60MOe8J13QuCs52k' localhost:8080/orders/mine -v
+curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjFjNjdiODM2ZTZkN2E5NDkwZGRlMTEiLCJpYXQiOjE3MTM1NDkxODAsImV4cCI6MTcxNjE0MTE4MH0.xSd_zKW9mdRE4e4QW6__eoVYPdPhishtvAwRBp-rAWM' localhost:8080/orders/mine -v
