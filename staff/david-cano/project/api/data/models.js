@@ -68,13 +68,6 @@ const order = new Schema({
         required: true
     },
 
-    // products: [
-    //     {
-    //         type: ObjectId,
-    //         ref: 'Product',
-    //     }
-    // ],
-
     products: [
         {
             type: ObjectId,
@@ -101,11 +94,11 @@ const order = new Schema({
 
     payment: {},
 
-    // buyer: {
-    //     type: String,
-    //     ref: "User",
-    //     required: true
-    // },
+    buyer: {
+        type: String,
+        ref: "User",
+        required: true
+    },
 
     statusOrder: {
         type: String,

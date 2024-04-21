@@ -46,7 +46,7 @@ function Order(props) {
 
                                 </div>
 
-                                <div>
+                                <div className='m-5'>
 
                                     <p>{p.name}</p>
                                     <p>Price: {p.price} €</p>
