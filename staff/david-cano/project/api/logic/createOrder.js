@@ -14,17 +14,19 @@ function createOrder(userId, callback) {
 
                 return
             }
+            const buyerName = user.name
+            // const products = user.cartItems.map(item => ({
+            //     name: item.name,
+            //     img: item.img,
+            //     price: item.price,
+            //     quantity: 1  // Para ajustar la cantidad según sea necesario
+            // }))
 
-            const products = user.cartItems.map(item => ({
-                name: item.name,
-                img: item.img,
-                price: item.price,
-                quantity: 1  // Para ajustar la cantidad según sea necesario
-            }))
+            const products = user.cartItems.map(item => item.id)
 
             const totalPrice = user.cartItems.reduce((total, item) => total + parseFloat(item.price), 0)
 
-            Order.create({ user: userId, products: products, buyer: user.name, totalPrice: totalPrice })
+            Order.create({ user: userId, products: products, buyer: buyerName, totalPrice: totalPrice })
             .then(() => {
                 // Limpiar cartItems del usuario
                 user.cartItems = []

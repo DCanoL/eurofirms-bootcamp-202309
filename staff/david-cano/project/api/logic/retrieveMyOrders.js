@@ -26,13 +26,14 @@ function retrieveMyOrders(userId, callback) {
                             delete order.user._id
                         }
 
-                        const products = order.products
+                        // if (order.products._id) {
+                        //     const products = order.products
 
-                        products.forEach(product => {
-                            product.id = product._id.toString()
-                            delete product._id
-                        })
-
+                        //     products.forEach(product => {
+                        //         product.id = product._id.toString()
+                        //         delete product._id
+                        //     })
+                        // }
                     })
 
                     callback(null, orders)
