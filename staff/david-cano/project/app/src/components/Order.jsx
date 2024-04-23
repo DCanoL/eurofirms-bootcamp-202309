@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Button } from '../library';
-import CartTotal from './CartTotal';
 
 function Order(props) {
     console.log('Order');
@@ -15,7 +14,6 @@ function Order(props) {
                     <table className="w-full border border-separate border-red-400 shadow-md rounded">
                         <thead>
                             <tr className="text-sm font-medium text-red-400 bg-blue-400 border">
-                                {/* <th className="p-2">Products</th> */}
                                 <th className="p-2">Status</th>
                                 <th className="p-2">Buyer</th>
                                 <th className="p-2">Date</th>
@@ -25,10 +23,9 @@ function Order(props) {
 
                         <tbody>
                             <tr className="text-sm text-black-700 text-center bg-gray-200 border">
-                                {/* <td className="p-2">{order.products}</td> */}
                                 <td className="p-2">{order.statusOrder}</td>
                                 <td className="p-2">{order.buyer}</td>
-                                <td className="p-2">{order.date}</td>
+                                <td className="p-2">{order.date = new Date().toLocaleDateString()}</td>
                                 <td className="p-2">{order.totalPrice} €</td>
                             </tr>
                         </tbody>
@@ -37,7 +34,7 @@ function Order(props) {
                     <div className=" shadow-md rounded mt-2">
                         {order.products.map((p) => (
 
-                            <div className="flex mb-2  p-5 flex-row" key={p.id}>
+                            <div className="flex mb-2  p-5 flex-row" key={p._id}>
 
                                 <div>
 
