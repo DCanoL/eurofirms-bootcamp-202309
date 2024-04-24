@@ -42,7 +42,14 @@ function UserHeader(props) {
 
     return (
         <Container align="center">
-            <div className="fixed top-0 w-full flex justify-between items-center md:min-w-[500px] lg:min-w-[768px] bg-[#ededaa] rounded-3xl" aria-label="Header">
+            <div className="fixed top-0 w-full flex justify-between items-center md:min-w-[500px] lg:min-w-[768px] bg-[#ededaa] rounded-3xl text-white" style={{
+                backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzfCJ2czLsLmWQqHTgBPzb3SVlebV653CeRjaiU-_CpZ5tsCux37eAtSffWPMmf20S8pA&usqp=CAU')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                width: '100%',
+                height: '70px',
+            }} aria-label="Header">
 
                 <Link onClick={handleHomeClick}>
                     <Logo />
@@ -53,9 +60,9 @@ function UserHeader(props) {
                     <span>{user.name}</span>
                 )}</h2>
 
-                <Link onClick={handleMyOrdersClick}>
+                <Button onClick={handleMyOrdersClick}>
                     My Orders
-                </Link>
+                </Button>
 
                 <Button onClick={handleLogoutClick}>
                     Logout

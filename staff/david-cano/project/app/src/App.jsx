@@ -126,7 +126,7 @@ function App() {
     <>
       <CartContext.Provider value={cartProducts}>
         <Routes>
-          <Route path='/' element={<Home onError={handleError} />} />
+          <Route path='/' element={<Home onError={handleError} onLogout={handleHomeShow} />} />
           <Route path='/cart/*' element={<Cart onLogout={handleHomeShow} onCartItemAdd={handleCartItemAdd} onCheckOut={handleUserOrders} onError={handleError} />} />
 
           <Route path="/register" element={<Register onSuccess={handleLoginShow} onLoginClick={handleLoginShow} onError={handleError} />} />
@@ -135,7 +135,7 @@ function App() {
 
           <Route path='/dashboard/*' element={<Dashboard onLogout={handleHomeShow} onError={handleError} />} />
 
-          <Route path='/userOrders/*' element={<UserOrders  onError={handleError} />} />
+          <Route path='/userOrders/*' element={<UserOrders onLogout={handleHomeShow} onError={handleError} />} />
 
           <Route path='/new-product' element={<CreateNewProduct onNewProductCancelClick={handleNewProductCancelClick} onNewProductSubmit={handleNewProductSubmit} onError={handleError} />} />
         </Routes>

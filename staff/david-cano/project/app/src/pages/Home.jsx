@@ -6,7 +6,7 @@ const Home = (props) => {
     const [timestamp, setTimestamp] = useState(null)
     return (
         <Container align="center">
-            <Header />
+            <Header  onLogout={props.onLogout} />
             <AllProducts timestamp={timestamp} onError={props.onError} />
             <Footer />
         </Container>

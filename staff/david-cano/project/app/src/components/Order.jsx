@@ -34,7 +34,7 @@ function Order(props) {
                     <div className=" shadow-md rounded mt-2">
                         {order.products.map((p) => (
 
-                            <div className="flex mb-2  p-5 flex-row" key={p._id}>
+                            <div className="flex mb-2  p-5 flex-row border-black-400 shadow-md rounded bg-blue-100 border" key={p._id}>
 
                                 <div>
 

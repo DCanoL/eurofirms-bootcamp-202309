@@ -32,7 +32,7 @@ export default function MyOrders(props) {
 
     return (
             <Container align="center">
-                <UserHeader />
+                <UserHeader onLogout={props.onLogout}  />
                 <h2 className='flex p-3 justify-center bg-[skyblue] m-3 rounded-3xl'>YOUR ORDERS</h2>
 
                 {orders.length > 0 ? (
@@ -45,6 +45,7 @@ export default function MyOrders(props) {
                 <>
                     <h2>¡¡¡ Your ORDERS is EMPTY !!!</h2>
                     <h2>Please, GO TO THE SHOOPING</h2>
+                    <img src="https://cdn.dribbble.com/users/3470232/screenshots/7776749/media/765a02ab1105385f24105903262e14a0.gif" alt="Orden Vacía" width='550px' height='550px' className='rounded-3xl m-5' />
                 </>
                 )}
                 <Footer />

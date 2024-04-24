@@ -64,7 +64,7 @@ export default function Product(props) {
         <div>
 
             {product.author.id === logic.getLoggedInUserId() ? 
-            <Button title="Delete" aria-label="Delete" onClick={handleDeleteClick}>Delete ❌</Button> : <Button onClick={handleAddCart} isRemove={isInCart}>{isInCart ? 'Remove 🛍️' : 'Add 🛍️'}</Button>}
+            <Button title="Delete" aria-label="Delete" onClick={handleDeleteClick}>Delete ❌</Button> : <Button onClick={handleAddCart} isRemove={isInCart}>{isInCart ? 'Remove Cart 🛍️' : 'Add Cart 🛍️'}</Button>}
         </div>
     </article>
 }

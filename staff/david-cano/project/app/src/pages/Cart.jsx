@@ -43,6 +43,7 @@ const Cart = (props) => {
                 <>
                     <h2>¡¡¡ Your Cart is EMPTY !!!</h2>
                     <h2>Please, GO TO THE SHOOPING</h2>
+                    <img src="https://cdn-icons-png.flaticon.com/512/11329/11329060.png" alt="Carrito Vacio" />
                 </>
             )}
 
