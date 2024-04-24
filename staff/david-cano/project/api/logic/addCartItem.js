@@ -30,7 +30,7 @@ function addCartItem(userId, productId, callback) {
                         user.cartItems.push(productId)
                     else
                         user.cartItems.splice(index, 1)
-                    // TODO create a function apart to delete items from cart
+                    
                     user.save()
                         .then(() => callback(null))
                         .catch(error => callback(new SystemError(error.message)))

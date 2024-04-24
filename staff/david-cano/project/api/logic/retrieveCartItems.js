@@ -15,7 +15,7 @@ function retrieveCartItems(userId, callback) {
                 return
             }
 
-            user.cartItems // [ObjectId('asfasdf'), ObjectId('asfasdfasdfasd'), ...]
+            user.cartItems 
 
             Product.find({ _id: { $in: user.cartItems } }).select('-__v').populate('author', 'name').lean()
                 .then(products => {

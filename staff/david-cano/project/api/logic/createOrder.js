@@ -15,12 +15,6 @@ function createOrder(userId, callback) {
                 return
             }
             const buyerName = user.name
-            // const products = user.cartItems.map(item => ({
-            //     name: item.name,
-            //     img: item.img,
-            //     price: item.price,
-            //     quantity: 1  // Para ajustar la cantidad según sea necesario
-            // }))
 
             const products = user.cartItems.map(item => item.id)
 
@@ -28,7 +22,6 @@ function createOrder(userId, callback) {
 
             Order.create({ user: userId, products: products, buyer: buyerName, totalPrice: totalPrice.toFixed(2) })
             .then(() => {
-                // Limpiar cartItems del usuario
                 user.cartItems = []
                 return user.save()
             })

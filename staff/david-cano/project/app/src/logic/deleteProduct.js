@@ -23,7 +23,6 @@ function deleteProduct(productId, callback) {
 
                         callback(new constructor(body.message))
                     })
-                    // .catch(error => callback(new SystemError(error.message)))
 
                 return
             }

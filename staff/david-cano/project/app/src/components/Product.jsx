@@ -1,16 +1,13 @@
 import Button from '../library/Button'
 import { useLocation } from 'react-router-dom'
 import logic from '../logic'
-// import CartItemQuantity from './CartItemQuantity'
 import React, { useState, useEffect } from 'react'
 
 export default function Product(props) {
-    console.log('Product')
 
     const product = props.product
     const location = useLocation()
     const isHomeOrDashboard = location.pathname === '/' || location.pathname === '/dashboard'
-    // const [quantity, setQuantity] = useState(product.quantity)
     const [price, setPrice] = useState(product.price * product.quantity)
 
     useEffect(() => {
@@ -55,8 +52,6 @@ export default function Product(props) {
 
     const isInCart = product.cartItem
 
-    console.log(product)
-
     return <article className="flex flex-col p-[.5rem] bg-[ghostwhite] border-2 border-indigo-600 ... rounded-3xl hover:bg-[skyblue] m-5">
         <p>{product.name}</p>
         <img className="max-w-[300px]" src={product.img} />
@@ -67,7 +62,6 @@ export default function Product(props) {
         {isInCart ? <p>Price: {price} €</p> : <p>Price: {product.price } €</p>}
 
         <div>
-        {/* {isInCart && !isHomeOrDashboard ? < CartItemQuantity quantity = {quantity} setQuantity={setQuantity} />: null} */}
 
             {product.author.id === logic.getLoggedInUserId() ? 
             <Button title="Delete" aria-label="Delete" onClick={handleDeleteClick}>Delete ❌</Button> : <Button onClick={handleAddCart} isRemove={isInCart}>{isInCart ? 'Remove 🛍️' : 'Add 🛍️'}</Button>}

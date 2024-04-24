@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
-
 import Orders from '../components/Orders'
 import { Container } from '../library'
-import { UserHeader, Footer, CartTotal } from '../components'
+import { UserHeader, Footer } from '../components'
 
 import logic from '../logic'
 
@@ -40,7 +39,6 @@ export default function MyOrders(props) {
                 <>
                     <div>
                     <Orders orders={orders} onError={props.onError} />
-                {/* <CartTotal /> */}
                     </div>
                 </>
             ) : (

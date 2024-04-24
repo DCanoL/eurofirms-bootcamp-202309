@@ -7,10 +7,8 @@ import logic from '../logic'
 const Cart = (props) => {
 
     const products = useCartContext()
-    // const [products, setProducts] = useState([useCartContext()])
 
     function handleCheckOutClick() {
-        //TODO manage payment
         try {
             logic.createOrder((error) => {
                 if (error) {
