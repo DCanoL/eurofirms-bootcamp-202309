@@ -71,26 +71,33 @@ const order = new Schema({
     products: [
         {
             type: ObjectId,
-            ref: 'Product',
-        
-            name: {
-                type: String,
-                required: true
-            },
-            img: {
-                type: String,
-                required: true
-            },
-            price: {
-                type: String,
-                required: true
-            },
-            quantity: {
-                type: Number,
-                required: true
-            }, 
+            ref: 'Product'
         }
     ],
+
+    // [
+    //     product: {
+    //         type: ObjectId,
+    //         ref: 'Product',
+
+    //         name: {
+    //             type: String,
+    //             required: true
+    //         },
+    //         img: {
+    //             type: String,
+    //             required: true
+    //         },
+    //         price: {
+    //             type: String,
+    //             required: true
+    //         },
+    //         quantity: {
+    //             type: Number,
+    //             required: true
+    //         }, 
+    //     }
+    // ],
 
     payment: {},
 

@@ -12,7 +12,7 @@ export default function MyOrders(props) {
 
     useEffect(() => {
         refreshOrders()
-    }, [])
+    }, [orders])
 
     function refreshOrders() {
         try {
