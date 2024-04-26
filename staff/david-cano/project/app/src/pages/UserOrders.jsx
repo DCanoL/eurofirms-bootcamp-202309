@@ -9,11 +9,10 @@ export default function MyOrders(props) {
     console.log('MyOrders')
 
     const [orders, setOrders] = useState([])
-    const [timestamp, setTimestamp] = useState(null)
     
     useEffect(() => {
         refreshOrders()
-    }, [timestamp])
+    }, [])
 
     function refreshOrders() {
         try {

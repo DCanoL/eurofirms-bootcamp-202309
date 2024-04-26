@@ -16,13 +16,12 @@ const Cart = (props) => {
 
                     return
                 }
+
+                props.onCheckOut()
             })
         } catch (error) {
             props.onError(error)
         }
-
-        props.onCheckOut()
-
     }
 
     return (
