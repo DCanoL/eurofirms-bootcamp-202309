@@ -24,3 +24,13 @@ Product
 - description (string, required)
 - price (string, required)
 - quantity (number, required)
+
+Order
+- id (string, unique, required)
+- user (ObjectId, required)
+- products ([ObjectId, required])
+- payment ()
+- buyer (string, required)
+- statusOrder ([Processing, Sent, Delivered, Cancel])
+- date (Date)
+- totalPrice (number, required)
