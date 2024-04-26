@@ -13,7 +13,7 @@ function Order(props) {
                 <div className=" shadow-md rounded mt-2">
                     <table className="w-full border border-separate border-red-400 shadow-md rounded">
                         <thead>
-                            <tr className="text-sm font-medium text-red-400 bg-blue-400 border">
+                            <tr className="text-sm font-medium text-white-400 bg-blue-400 border">
                                 <th className="p-2">Status</th>
                                 <th className="p-2">Buyer</th>
                                 <th className="p-2">Date</th>
