@@ -54,7 +54,7 @@ function Order(props) {
                         ))}
                     </div>
 
-                    <Button>BUY</Button>
+                    <Button>Buy now</Button>
                 </div>
             </Container>
         </>
