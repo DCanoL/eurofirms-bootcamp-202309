@@ -85,7 +85,7 @@ function header() {
                     </>
                 )}
 
-                <h2> Wellcome! {user && (
+                <h2> Wellcome!  {user && (
                     <span>{user.name}</span>
                 )}</h2>
 

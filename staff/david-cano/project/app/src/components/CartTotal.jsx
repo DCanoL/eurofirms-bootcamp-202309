@@ -1,4 +1,3 @@
-import React from 'react';
 import { useCartContext } from './CartContext';
 
 export default function CartTotal() {
